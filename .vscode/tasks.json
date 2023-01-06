@@ -1,0 +1,105 @@
+{
+    "version": "2.0.0",
+    "runner": "terminal",
+    "type": "shell",
+    "echoCommand": true,
+    "presentation": {
+        "reveal": "always"
+    },
+    "tasks": [
+        {
+            "label": "compile C++",
+            "command": "g++",
+            "type": "shell",
+            "args": [
+                "-g3",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": {
+                "applyTo": "allDocuments",
+                "flieLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "compile C",
+            "command": "gcc",
+            "type": "shell",
+            "args": [
+                "-g3",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": {
+                "flieLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "Python Run",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "${file}"
+            ],
+            "options": {
+                "env": {
+                    "PYTHONIOENCODING": "UTF-8"
+                }
+            },
+            "group": "build"
+        },
+        {
+            "label": "Run execute",
+            "command": "cd ${fileDirname} && ./${fileBasenameNoExtension}",
+            "group": "test"
+        },
+        {
+            "type": "ros",
+            "command": "roscore",
+            "problemMatcher": [
+                "$roscore"
+            ],
+            "label": "roscore",
+            "group": "build"
+        },
+        {
+            "type": "ros",
+            "command": "roslaunch",
+            "args": [
+                "package_name",
+                "launch_file.launch"
+            ],
+            "problemMatcher": [
+                "$roslaunch"
+            ],
+            "label": "roslaunch",
+            "group": "build"
+        },
+    ]
+}
