@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>lidar_fusion</name>
+  <version>1.0.0</version>
+  <description>
+    2개의 라이다를 융합해 360 laser scan 데이터를 출력해주는 패키지
+  </description>
+
+  <author email="addwood1@gmail.com">kimjuwon</author>
+  <maintainer email="addwood1@gmail.com">kimjuwon</maintainer>
+
+  <license>Apache 2.0</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+</package>

@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/swlee/catkin_ws/devel/include/**",
+                "/home/swlee/colcon_ws/install/turtlebot3_gazebo/include/**",
+                "/opt/ros/noetic/include/**",
+                "/home/swlee/colcon_ws/install/turtlebot3_fake_node/include/**",
+                "/home/swlee/colcon_ws/install/custom_interfaces/include/**",
+                "/home/swlee/catkin_ws/src/gazebo_ros_pkgs/gazebo_plugins/include/**",
+                "/home/swlee/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros/include/**",
+                "/home/swlee/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros_control/include/**",
+                "/home/swlee/catkin_ws/src/realsense_gazebo/include/**",
+                "/home/swlee/catkin_ws/src/rtabmap_ros/include/**",
+                "/home/swlee/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+                "/home/swlee/catkin_ws/src/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+                "/usr/include/**",
+                "/opt/ros/noetic/include/*",
+                "${workspaceFolder}/include"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
